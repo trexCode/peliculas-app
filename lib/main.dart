@@ -4,7 +4,6 @@ import 'package:peliculas_app/screens/screens.dart';
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
-
   const MyApp({Key? key}) : super(key: key);
 
   @override
@@ -14,10 +13,14 @@ class MyApp extends StatelessWidget {
       title: 'Peliculas',
       initialRoute: 'home',
       routes: {
-        'home': ( _ ) => const HomeScreen(),
-        'details': ( _ ) => const DetailsScreen()
+        'home': (_) => const HomeScreen(),
+        'details': (_) => const DetailsScreen()
       },
-      
+      theme: ThemeData.light().copyWith(
+        appBarTheme: const AppBarTheme(
+          color: Colors.indigo,
+        ),
+      ),
     );
   }
 }
